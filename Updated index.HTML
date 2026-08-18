@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- APP HEADER -->
+    <header class="header">
+        <div class="logo">
+            <span>📝</span>
+            <h1>Notes</h1>
+        </div>
+        <div class="header-actions">
+            <button id="darkModeBtn" title="Dark mode">🌙</button>
+        </div>
+    </header>
+    <!-- SEARCH -->
+    <section class="search-section">
+        <div class="search-box">
+            <span>🔍</span>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search notes..."
+            >
+        </div>
+    </section>
+    <!-- MAIN CONTENT -->
+    <main class="container">
+        <!-- NEW NOTE BUTTON -->
+        <button class="new-note-btn" id="newNoteBtn">
+            <span>＋</span>
+            New Note
+        </button>
+        <!-- NOTE EDITOR -->
+        <section class="editor" id="editor">
+            <div class="editor-header">
+                <input
+                    type="text"
+                    id="noteTitle"
+                    placeholder="Title"
+                >
+                <button id="closeEditorBtn">✕</button>
+            </div>
+            <textarea
+                id="noteContent"
+                placeholder="Start writing..."
+            ></textarea>
+            <div class="editor-footer">
+                <span id="wordCount">0 words</span>
+                <div>
+                    <button
+                        class="cancel-btn"
+                        id="cancelBtn"
+                    >
+                        Cancel
+                    </button>
+                    <button
+                        class="save-btn"
+                        id="saveBtn"
+                    >
+                        Save
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- PINNED NOTES -->
+        <section class="notes-section">
+            <div class="section-title">
+                <h2>Pinned</h2>
+            </div>
+            <div
+                class="notes-grid"
+                id="pinnedNotes"
+            ></div>
+        </section>
+        <!-- ALL NOTES -->
+        <section class="notes-section">
+            <div class="section-title">
+                <h2>All Notes</h2>
+                <span id="noteCount">0 notes</span>
+            </div>
+            <div
+                class="notes-grid"
+                id="notesContainer"
+            ></div>
+        </section>
+        <!-- EMPTY MESSAGE -->
+        <div
+            class="empty-state"
+            id="emptyState"
+        >
+            <div class="empty-icon">📝</div>
+            <h2>No notes yet</h2>
+            <p>
+                Create your first note to get started.
+            </p>
+            <button
+                class="new-note-btn"
+                id="emptyNewNoteBtn"
+            >
+                ＋ Create Note
+            </button>
+        </div>
+    </main>
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
